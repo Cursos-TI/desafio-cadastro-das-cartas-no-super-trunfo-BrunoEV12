@@ -15,7 +15,7 @@ int main (){
     char cidadecarta1[100], cidadecarta2[100];
     
     //Variaveis da população das cartas 1 e 2.
-    int populaçaocarta1, populaçaocarta2;
+    int populacaocarta1, populacaocarta2;
     
     //Variaveis da area territorial das cartas 1 e 2.
     double areacarta1, areacarta2;
@@ -43,7 +43,7 @@ int main (){
     fgets(cidadecarta1, 100, stdin);    //Ler o que o usuario digitou
     
     printf("Digite a população da cidade da carta 1: ");   //Pedir população da cidade da carta 1.
-    scanf("%d", &populaçaocarta1);   //Ler o que o usuario digitou.
+    scanf("%d", &populacaocarta1);   //Ler o que o usuario digitou.
     
     printf("Digite a Area da Cidade da carta 1: ");  //Pedir Area da cidade da carta 1.
     scanf("%lf", &areacarta1);    //Ler o que o usuario digitou.
@@ -74,7 +74,7 @@ int main (){
     printf("Cidade: %s \n", cidadecarta1);
     
     //Apresentação da POPULAÇÃO.
-    printf("População: %d \n", populaçaocarta1);
+    printf("População: %d \n", populacaocarta1);
     
     //Apresentação da AREA.
     printf("Area da Cidade: %.2f \n", areacarta1);
@@ -110,7 +110,7 @@ int main (){
     fgets(cidadecarta2, 100, stdin);    //Ler o que o usuario digitou
     
     printf("Digite a população da cidade da carta 2: ");   //Pedir população da cidade da carta 2.
-    scanf("%f", &populaçaocarta2);   //Ler o que o usuario digitou.
+    scanf("%f", &populacaocarta2);   //Ler o que o usuario digitou.
     
     printf("Digite a Area da Cidade da carta 2: ");  //Pedir Area da cidade da carta 2.
     scanf("%lf", &areacarta2);    //Ler o que o usuario digitou.
@@ -140,7 +140,7 @@ int main (){
     printf("Cidade: %s \n", cidadecarta2);
     
     //Apresentação da POPULAÇÃO.
-    printf("População: %d \n", populaçaocarta2);
+    printf("População: %d \n", populacaocarta2);
     
     //Apresentação da AREA.
     printf("Area da Cidade: %.2f \n", areacarta2);
