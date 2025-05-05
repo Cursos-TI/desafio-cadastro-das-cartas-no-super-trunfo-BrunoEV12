@@ -15,7 +15,7 @@ int main (){
     char cidadecarta1[100], cidadecarta2[100];
     
     //Variaveis da população das cartas 1 e 2.
-    int populacaocarta1, populacaocarta2;
+    signed long int populacaocarta1, populacaocarta2;
     
     //Variaveis da area territorial das cartas 1 e 2.
     double areacarta1, areacarta2;
@@ -31,6 +31,10 @@ int main (){
     
     //Variaveis do PIB Percapita das cartas 1 e 2.
     float pib_percapita_carta1, pib_percapita_carta2;
+    
+    //Super Poder das Cartas 1 e 2
+    double SuperPoder1, SuperPoder2;
+    
     
     
     
@@ -61,7 +65,7 @@ int main (){
     fgets(cidadecarta1, 100, stdin);    //Ler o que o usuario digitou
     
     printf("Digite a população da cidade da carta 1: ");   //Pedir população da cidade da carta 1.
-    scanf("%d", &populacaocarta1);   //Ler o que o usuario digitou.
+    scanf("%ld", &populacaocarta1);   //Ler o que o usuario digitou.
     
     printf("Digite a Area da Cidade da carta 1: ");  //Pedir Area da cidade da carta 1.
     scanf("%lf", &areacarta1);    //Ler o que o usuario digitou.
@@ -76,13 +80,16 @@ int main (){
     
     
     
-    //Calculo densidade populacional e PIBPercapita da CARTA 1.
+    //Calculo densidade populacional, PIBPercapita e Super Poder da CARTA 1.
     
     //Calculo Densidade Populacional CARTA 1.
     densidade_populacional_carta1 =(float) populacaocarta1 / areacarta1;
     
     //Calculo PIB Percapita CARTA 1.
     pib_percapita_carta1 = (float) pibcarta1 / populacaocarta1;
+    
+    //Calculo Super Poder CARTA 1.
+    SuperPoder1 = (double) (populacaocarta1 + areacarta1 + pibcarta1 + pontosturisticoscarta1 + pib_percapita_carta1) - densidade_populacional_carta1;
     
     
     
@@ -107,7 +114,7 @@ int main (){
     printf("Cidade: %s \n", cidadecarta1);
     
     //Apresentação da POPULAÇÃO.
-    printf("População: %d \n", populacaocarta1);
+    printf("População: %ld \n", populacaocarta1);
     
     //Apresentação da AREA.
     printf("Area da Cidade: %.2f \n", areacarta1);
@@ -119,10 +126,13 @@ int main (){
     printf("Pontos Turisticos da Cidade: %d \n", pontosturisticoscarta1);
     
     //Apresentação da Densidade Populacional.
-    printf("Densidade Populacional: %f \n", densidade_populacional_carta1);
+    printf("Densidade Populacional: %.2f \n", densidade_populacional_carta1);
     
     //Apresentação do PIB Per Capita.
-    printf("PIB Per Capita: %f \n", pib_percapita_carta1);
+    printf("PIB Per Capita: %.2f \n", pib_percapita_carta1);
+    
+    //Apresentação Super Poder.
+    printf("Super Poder: %.2f \n", SuperPoder1);
     
     
     //Diferenciar linha
@@ -159,7 +169,7 @@ int main (){
     fgets(cidadecarta2, 100, stdin);    //Ler o que o usuario digitou
     
     printf("Digite a população da cidade da carta 2: ");   //Pedir população da cidade da carta 2.
-    scanf("%d", &populacaocarta2);   //Ler o que o usuario digitou.
+    scanf("%ld", &populacaocarta2);   //Ler o que o usuario digitou.
     
     printf("Digite a Area da Cidade da carta 2: ");  //Pedir Area da cidade da carta 2.
     scanf("%lf", &areacarta2);    //Ler o que o usuario digitou.
@@ -175,13 +185,16 @@ int main (){
     
     
     
-    //Calculo densidade populacional e PIBPercapita da CARTA 2.
+    //Calculo densidade populacional, PIBPercapita e Super Poder da CARTA 2.
     
     //Calculo Densidade Populacional CARTA 2.
     densidade_populacional_carta2 =(float) populacaocarta2 / areacarta2;
     
     //Calculo PIB Percapita CARTA 2.
     pib_percapita_carta2 = (float) pibcarta2 / populacaocarta2;
+    
+    //Calculo Super Poder CARTA 2.
+    SuperPoder2 = (double) (populacaocarta2 + areacarta2 + pibcarta2 + pontosturisticoscarta2 + pib_percapita_carta2) - densidade_populacional_carta2;
     
     
     
@@ -209,7 +222,7 @@ int main (){
     printf("Cidade: %s \n", cidadecarta2);
     
     //Apresentação da POPULAÇÃO.
-    printf("População: %d \n", populacaocarta2);
+    printf("População: %ld \n", populacaocarta2);
     
     //Apresentação da AREA.
     printf("Area da Cidade: %.2f \n", areacarta2);
@@ -226,10 +239,77 @@ int main (){
     //Apresentação do PIB Per Capita.
     printf("PIB Per Capita: %f \n", pib_percapita_carta2);
     
+    //Apresentação Super Poder.
+    printf("Super Poder: %.2f \n", SuperPoder2);
+    
     
     
     //Diferenciar linha
     printf("========================================= \n");
+    
+    
+    
+    
+    
+    
+    
+    
+    //Batalha de cartas
+    
+    
+    //Introdução do usuario a batalha de cartas
+    printf("Agora vamos para a Batalha. \n");
+    
+    //Regras
+    printf("REGRAS: Vamos lhe mostra se a CARTA 1 é superior a 2, se sim o valor exibido sera (1), se não o valor sera(0), o que significa que nesse ponto a CARTA 2 pontuou, a unica exeção será a Densidade Populacional, Pontua aquele que tem a menor. \n");
+    
+    //Diferenciar linha
+    printf("========================================= \n");
+    
+    
+    
+    
+    
+    
+    
+    
+    //Comparação da Batalha, e exibição ao usuario.
+    
+    
+    //Comparação da população.
+    printf("POPULAÇÃO - A CARTA 1 é superior a CARTA 2 : %d \n", populacaocarta1 > populacaocarta2);
+    
+    //comparção da area.
+    printf("AREA - A CARTA 1 é superior a CARTA 2 : %d \n", areacarta1 > areacarta2);
+    
+    //Comparação do pib.
+    printf("PIB - A CARTA 1 é superior a CARTA 2 : %d \n", pibcarta1 > pibcarta2);
+    
+    //Comparação de pontos turisticos.
+    printf("PONTOS TURISTICOS - A CARTA 1 é superior a CARTA 2 : %d \n", pontosturisticoscarta1 > pontosturisticoscarta2);
+    
+    //Comparação da Densidade Populacional.
+    printf("DENSIDADE POPULACIONAL - A CARTA 1 é inferior a CARTA 2 : %d \n", densidade_populacional_carta1 < densidade_populacional_carta2);
+    
+    //Comparação do Pib PER Capita.
+    printf("PIB PER CAPITA - A CARTA 1 é superior a CARTA 2 : %d \n", pib_percapita_carta1 > pib_percapita_carta2);
+    
+    //Comparação do Super Poder
+    printf("SUPER PODER - A CARTA 1 é superior a CARTA 2 : %d \n", SuperPoder1 > SuperPoder2);
+    
+    
+    
+    //Diferenciar linha
+    printf("========================================= \n");
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Agradecimento final.
     printf("Obrigado por participar!");
