@@ -309,6 +309,54 @@ int main (){
     
     
     
+    //Batalha 2.0
+    
+    
+    //Apresentar ao usuario.
+    printf("Agora Vamos testa a batalha 2.0, aqui vamos exibir melhor o por que tal carta foi vencedora da batalha \n");
+    printf("No momento só vamos Demonstra com a População. \n");
+    
+    //Diferenciar linha
+    printf("========================================= \n");
+    
+    
+    //Batalha 2.0 População.
+    
+    if (populacaocarta1 > populacaocarta2){
+    
+        printf("Batalha de População \n");
+        printf("CARTA 1 - %s - População de %ld Habitantes \n", cidadecarta1, populacaocarta1);
+        printf("CARTA 2 - %s - População de %ld Habitantes \n", cidadecarta2, populacaocarta2);
+        printf("A CARTA 1 Venceu. \n");
+    
+    
+    } else {
+    
+        printf("Batalha de População \n");
+        printf("CARTA 1 - %s - População de %ld Habitantes \n", cidadecarta1, populacaocarta1);
+        printf("CARTA 2 - %s - População de %ld Habitantes \n", cidadecarta2, populacaocarta2);
+        printf("A CARTA 2 Venceu. \n");
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //Diferenciar linha
+    printf("========================================= \n");
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     //Agradecimento final.
